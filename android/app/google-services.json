@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "551073816594",
+    "project_id": "competition-f740d",
+    "storage_bucket": "competition-f740d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:551073816594:android:bb7be6e60644ca9a9f78cb",
+        "android_client_info": {
+          "package_name": "com.example.flutter_code_challenge"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0ztXKjfFSpWjbZsi4kOCpaNj8wzVCgxc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,49 @@
+name: flutter_code_challenge
+description: A new Flutter project.
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.1.5 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  geolocator: ^10.1.0
+  shared_preferences: ^2.2.2
+  http: ^1.1.0
+  url_launcher: ^6.2.1
+  flutter_spinkit: ^5.2.0
+  cached_network_image: ^3.3.0
+  material_design_icons_flutter: ^7.0.7296
+  intl: ^0.18.1
+  firebase_core: ^2.22.0
+  cloud_firestore: ^4.13.1
+  timezone: ^0.9.2
+  geocoding: ^2.1.1
+  uuid: ^4.2.1
+  flutter_animate: ^4.3.0
+  flutter_native_splash: ^2.3.6
+  flutter_launcher_icons: ^0.13.1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.1
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo.png"
+
+flutter_native_splash:
+  color: "#1b4052"
+  image: "assets/logo_main.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
