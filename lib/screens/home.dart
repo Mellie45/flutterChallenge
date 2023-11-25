@@ -65,9 +65,6 @@ class _HomeState extends State<Home> {
     }
   }
 
-  //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
-
-  //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
   @override
   void initState() {
     super.initState();
