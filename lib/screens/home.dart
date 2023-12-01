@@ -176,7 +176,7 @@ class _HomeState extends State<Home> {
       ),
       endDrawer: Drawer(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Theme.of(context).primaryColor,
         child: ListView(
           children: [
             ListTile(
