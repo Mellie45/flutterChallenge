@@ -24,6 +24,7 @@ class _DateObjectState extends State<DateObject> {
     var yearData = now.year;
     var monthData = now.month;
     var dayData = now.day;
+    //Date update test to Git
     var timeData = DateFormat.jm().format(DateFormat('hh:mm').parse('${now.hour}:${now.minute}'));
     String mainDate = '${yearData.toString()} ${monthData.toString().padLeft(2, '0')} ${dayData.toString().padLeft(2, '0')}';
     String data = "$mainDate $timeData";
