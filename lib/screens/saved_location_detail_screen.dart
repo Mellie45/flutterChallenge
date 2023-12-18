@@ -252,7 +252,7 @@ class _SavedLocationDetailState extends State<SavedLocationDetail> {
       body: Container(
         height: height,
         width: width,
-        decoration: (imgCondition.isEmpty)
+        decoration: imageUrls.isEmpty
             ? BoxDecoration(
                 image: DecorationImage(
                   image: const AssetImage('assets/fallback_none.png'),

@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       scaffoldMessengerKey: snackbarKey,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromRGBO(76, 172, 233, 1.0)),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromRGBO(100, 34, 68, 1.0)),
         useMaterial3: true,
       ),
       home: const InitialScreen(),

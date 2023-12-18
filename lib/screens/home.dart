@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_code_challenge/network_services/weather_values.dart';
+import 'package:flutter_code_challenge/screens/about_this_app.dart';
 import 'package:flutter_code_challenge/screens/saved_locations.dart';
 import 'package:flutter_code_challenge/ui_elements/home_bottom_card.dart';
 import 'package:flutter_code_challenge/utilities/constants.dart';
@@ -11,7 +12,10 @@ import 'package:flutter_code_challenge/utilities/datetime_object.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:uuid/uuid.dart';
+
+final Uri _url = Uri.parse('http://www.baaadkitty.uk');
 
 class Home extends StatefulWidget {
   final dynamic locationWeather;
@@ -72,6 +76,12 @@ class _HomeState extends State<Home> {
     fetchBackgroundImg();
     loadOrGenerateUserReference();
     generateSearchValue();
+  }
+
+  Future<void> launchBaaadKittyUrl() async {
+    if (!await launchUrl(_url)) {
+      throw Exception('Could not launch $_url. Please check your connection');
+    } else {}
   }
 
   void weatherDetails(dynamic weatherData) {
@@ -201,26 +211,30 @@ class _HomeState extends State<Home> {
                 leading: Icon(MdiIcons.cloudArrowRightOutline, color: Colors.white, size: 28),
                 title: const Text(
                   'Saved Locations',
-                  style: kAppbarText,
+                  style: kDrawerText,
                 ),
                 onTap: () {
                   Navigator.pop(context);
                   Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SavedLocationsScreen()));
                 }),
-            const Divider(thickness: 1.0, color: Colors.white),
+            const Divider(thickness: 1.0, color: Colors.white, indent: 8.0),
             ListTile(
               leading: Icon(MdiIcons.informationOutline, color: Colors.white, size: 28),
               title: const Text(
                 'About this app',
-                style: kAppbarText,
+                style: kDrawerText,
               ),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const AboutThisApp()));
+              },
             ),
             ListTile(
               leading: Icon(MdiIcons.accountCardOutline, color: Colors.white, size: 28),
               title: const Text(
                 'About Baaad Kitty',
-                style: kAppbarText,
+                style: kDrawerText,
               ),
+              onTap: () => launchBaaadKittyUrl(),
             ),
           ],
         ),

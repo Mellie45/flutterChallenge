@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 const kAppbarText = TextStyle(fontWeight: FontWeight.w500, fontSize: 17.0, height: 1.4, color: Colors.white);
+const kDrawerText = TextStyle(fontWeight: FontWeight.w500, fontSize: 14.0, height: 1.4, color: Colors.white);
 const kForecastPanel = TextStyle(fontWeight: FontWeight.w500, fontSize: 14.0, height: 1.4, color: Colors.white);
 
 const kDateStyle = TextStyle(fontWeight: FontWeight.w600, fontSize: 36.0, height: 1.4, color: Colors.white);
